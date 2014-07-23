@@ -14,10 +14,10 @@ do {
   echo
   echo Start Check proxy $Line \"$line\" @ `date +%c`
   echo $cmd
-  Start=`eval $Time`
-  Head=`eval $cmd`
+  Start=`$Time`
+  Head=`$cmd`
   res=$?
-  End=`eval $Time`
+  End=`$Time`
   let Diff=$End-$Start
   echo Spent $Diff seconds for proxy \"$line\"
   if [ $res -ne 0 ]; then
@@ -32,10 +32,10 @@ do {
 
   cmd="curl $cmd_opt $line $Page"
   echo $cmd
-  Start=`eval $Time`
-  Contents=`eval $cmd`
+  Start=`$Time`
+  Contents=`$cmd`
   res=$?
-  End=`eval $Time`
+  End=`$Time`
   if [ $res -ne 0 ]; then
 	echo Fetch webpage failed, ignored.
 	#echo $cmd >> contents.txt
