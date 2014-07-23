@@ -27,6 +27,7 @@ do {
   echo $Head | grep -q "HTTP/1.[01] \(200\|302\)"
   if [ $? -ne 0 ]; then
 	echo Response error while check header, ignored.
+	continue
   fi
   echo Check Header OK, try to fetch the webpage through proxy \"$line\" @ `date +%c`
 
