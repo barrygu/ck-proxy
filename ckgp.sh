@@ -42,13 +42,12 @@ function check_p ()
 		cmd="curl -Is $cmd_opt $line $Page"
 		echo $cmd
 		Start=`$Time`
-		#Head=`$cmd`
-		sleep 1
+		Head=`$cmd`
 		res=$?
 		End=`$Time`
 		let Diff=$End-$Start
 		echo Spent $Diff seconds for proxy \"$line\"
-		continue
+
 		if [ $res -ne 0 ]; then
 			echo Check header failed, ignored.
 			continue
