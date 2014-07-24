@@ -26,7 +26,7 @@ function get_site()
 function check_p ()
 {
 	local name=$1
-	local site=`get_site $name`
+	local site=(`get_site $name`)
 	local Page=${site[0]}
 	local Key=${site[1]}
 	local Lines=0
