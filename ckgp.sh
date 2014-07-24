@@ -12,7 +12,7 @@ do {
 
   cmd="curl -Is $cmd_opt $line $Page"
   echo
-  echo Start Check proxy $Line \"$line\" @ `date +%c`
+  echo Start Check proxy $Lines \"$line\" @ `date +%c`
   echo $cmd
   Start=`$Time`
   Head=`$cmd`
